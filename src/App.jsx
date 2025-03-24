@@ -3,6 +3,8 @@ import React from "react";
 import Row from "./Component/Row";
 import Header from "./Component/Header";
 import Sidebar from "./Component/Sidebar";
+import Dashboard from "./Component/Dashboard";
+
 
 
 
@@ -32,6 +34,7 @@ function App(){
       ))}
     
     </div>
+    <Dashboard/>
 </>
 )}
 export default App;
