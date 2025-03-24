@@ -56,5 +56,6 @@ body{
 
 .sidebar-menus a:focus{
     color: rgb(6, 224, 133);
-    background-image: linear-gradient(rgb(185, 245, 198),rgb(236, 253, 236));
+    background-image: linear-gradient(rgb(227, 243, 230),rgb(246, 250, 246));
+    border-left: 2px solid rgb(6, 224, 133);
 }
