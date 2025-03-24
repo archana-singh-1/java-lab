@@ -1,0 +1,73 @@
+ .courses-box {
+    background-color:white;
+    height: 150px; 
+    width: 220px;
+    margin: 15px ;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    word-wrap: break-word; 
+    text-align: left;
+    
+}
+
+.courses-box p {
+    font-size: 14px;
+    color: rgb(144, 139, 139);
+    margin: 5px 10px;
+    word-wrap: break-word; 
+    font-weight: bold;
+    overflow-wrap: break-word; 
+    text-align: left;
+}
+
+.box-logo img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.box-logo p{
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(78, 73, 73);
+}
+
+ .box-img {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.box-img p{
+    margin-left: 15px; 
+    font-size: 12px; 
+} 
+
+.box-img img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.box-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0px;
+}
+
+
+.box-content .progress-status{
+    color: black;
+}
+
+
+
+  
+
+
+
