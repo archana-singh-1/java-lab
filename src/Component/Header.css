@@ -18,7 +18,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: linear-gradient(to right, rgb(207, 247, 225), white,white, rgb(227, 245, 227));
+    background: linear-gradient(to right, rgb(207, 247, 225), rgb(248, 244, 244),rgb(244, 240, 240), rgb(227, 245, 227));
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -30,7 +30,7 @@ body{
     margin-left: 13rem;
     color: #333;
   }
-  h1 .search-icon{
+  .header-component  h1 .search-icon{
     background-color: white;
     border-radius: 60%;
     color: rgb(97, 94, 94);
