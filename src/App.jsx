@@ -1,11 +1,10 @@
-import React from "react";
-import Courses from "./Component/Courses";
+import Sidebar from "./Component/Sidebar";
+
 function App(){
-  
   return(
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <>
+     <Sidebar/>
+    </>
   )
 }
 export default App;
