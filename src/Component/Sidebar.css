@@ -29,6 +29,9 @@ body{
     border-radius: 10px;
     margin: 20px;
 }
+.sidebar-heading h1{
+    font-size: 1.5rem;
+}
 .sidebar-heading p{
     color: rgb(73, 71, 71);
 }
@@ -56,6 +59,6 @@ body{
 
 .sidebar-menus a:focus{
     color: rgb(6, 224, 133);
-    background-image: linear-gradient(rgb(227, 243, 230),rgb(246, 250, 246));
+    background: linear-gradient(to right, rgb(214, 237, 225), white, rgb(229, 241, 229));
     border-left: 2px solid rgb(6, 224, 133);
 }
