@@ -1,0 +1,25 @@
+
+:root{
+    color: #D1F8EF;
+    color:#FFEDFA;
+    color: #E1EACD;
+}
+
+.row-container{
+    height: 190px;
+    width: 100%;
+    font-family: sans-serif Arial,sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:left;
+    background: linear-gradient(to right, 
+        #D1F8EF, 
+        rgba(209, 248, 239, 0.8) 25%,  
+        rgba(248, 199, 234, 0.6) 50%, 
+        rgba(227, 228, 223, 0.8) 75%,  
+        #bae4be  
+    );
+
+    
+}
