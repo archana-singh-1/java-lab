@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: auto;
     display: flex;
-    background: linear-gradient(to right, rgb(217, 245, 230), white,white, rgb(228, 247, 228));
+    background: linear-gradient(to right, rgb(217, 245, 230), rgb(245, 241, 243),rgb(247, 244, 245), rgb(228, 247, 228));
 }
 
 .header-component {
