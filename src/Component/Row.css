@@ -5,14 +5,22 @@
     color: #E1EACD;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .row-container{
     height: 190px;
-    width: 100%;
+    width: 70%;
     font-family: sans-serif Arial,sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items:left;
+    margin: auto;
+    
     background: linear-gradient(to right, 
         #D1F8EF, 
         rgba(209, 248, 239, 0.8) 25%,  
