@@ -14,7 +14,7 @@
 
 .courses-box p {
     font-size: 14px;
-    color: rgb(144, 139, 139);
+    color: rgb(21, 21, 21);
     margin: 5px 10px;
     word-wrap: break-word; 
     font-weight: bold;
@@ -32,7 +32,7 @@
 .box-logo p{
     font-size: 17px;
     font-weight: bold;
-    color: rgb(78, 73, 73);
+    color: rgb(10, 10, 10);
 }
 
  .box-img {

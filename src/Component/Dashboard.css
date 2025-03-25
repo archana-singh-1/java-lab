@@ -1,145 +1,286 @@
 .dashboard-container {
-    max-width: 1200px;
-    padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    margin-left: 250px;
-  }
-  
-  .dashboard-header {
-    background: #97e3c0;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 20px;
+  padding-left: 235px;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.dashboard-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard-header {
+  background-color: rgb(83, 192, 148);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: white;
+}
+
+.dashboard-charts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dashboard-learning-time-card,
+.dashboard-activity-chart {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.time-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-circle-chart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border-top: 10px solid #4b8bff;
+  border-right: 10px solid red;
+  border-bottom: 10px solid green;
+  border-left: 10px solid orange;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.dashboard-legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.reading {
+  background-color: #4b8bff;
+}
+.writing {
+  background-color: #ff6b81;
+}
+.video {
+  background-color: #00b894;
+}
+.assignment {
+  background-color: #f9ca24;
+}
+
+.dashboard-activity-chart img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.dashboard-courses-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.das-course-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.das-course-2 h4 {
+  display: inline-block;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.dashboard-course-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(187, 182, 182);
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.dashboard-course-card span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.dashboard-course-card button {
+  border: 3px solid rgb(99, 242, 197);
+  color: #00b894;
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dashboard-sidebar {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard-calendar-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calendar {
+  max-width: 100%;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.calendar .react-calendar {
+  width: 100% !important;
+  border: none;
+}
+
+.calendar .react-calendar__tile {
+  padding: 5px !important;
+}
+
+.date-para {
+  margin-top: 10px;
+  color: #555;
+  text-align: center;
+}
+
+.dashboard-tasks-payment {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-tasks-payment span {
+  cursor: pointer;
+}
+
+/* ✅ RESPONSIVE PART */
+
+@media screen and (max-width: 992px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 20px;
   }
 
-  .dashboard-charts{
-    display: flex;
+  .dashboard-content,
+  .dashboard-sidebar {
+    width: 100%;
   }
-  
-  
+
+  .dashboard-charts {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashboard-course-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.95rem;
+  }
+
   .dashboard-learning-time-card,
   .dashboard-activity-chart,
-  .dashboard-calendar-section,
   .dashboard-courses-section,
+  .dashboard-calendar-section,
   .dashboard-tasks-payment {
-    background: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  }
-  .dashboard-learning-time-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .dashboard-learning-time-card h3,
-  .dashboard-activity-chart h3,
-  .dashboard-calendar-section h3,
-  .dashboard-courses-section h3,
-  .dashboard-tasks-payment h3 {
-    margin-bottom: 15px;
-  }
-  .time-cart{
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .dashboard-circle-chart {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(#4caf50 25%, #ff9800 25% 50%, #2196f3 50% 75%, #f44336 75%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    color: white;
-  }
-  
-  .dashboard-legend{
-    display: flex;
-    justify-content: space-around;
-  }
-  .dashboard-legend p{
-    margin-top: 10px;
-  }
-  
-  .dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  .dot.reading {
-    background-color: #4caf50;
-  }
-  .dot.writing {
-    background-color: #ff9800;
-  }
-  .dot.video {
-    background-color: #2196f3;
-  }
-  .dot.assignment {
-    background-color: #f44336;
-  }
-  
-  .dashboard-activity-chart img,
-  .dashboard-calendar-section img {
-    width: 50%;
-    border-radius: 15px;
-  }
-  
-  .dashboard-courses-section .dashboard-course-card ,.dashboard-course-card{
-    display: flex;
-    justify-content: center;
-    border: 1px solid rgba(224, 220, 220, 0.555);
-    border-radius: 15px;
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
   }
 
-  .dashboard-course-card span{
-    font-size: 15px;
-    color: #555;
+  .dashboard-circle-chart {
+    width: 90px;
+    height: 90px;
   }
-  
-  
+
+  .dashboard-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .calendar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashboard-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.85rem;
+  }
+
+  .dashboard-circle-chart {
+    width: 70px;
+    height: 70px;
+  }
+
   .dashboard-course-card button {
-    border: 2px solid rgb(158, 247, 199);
-    color: #6cf4c0;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
   }
-  .das-course-1,.das-course-2{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
+
+  .time-cart {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
-  .das-course-2{
-    width: 50%;
-  }
-  .dashboard-course-card button:hover {
-    background-color: #43a047;
-    color: white;
-  }
-  
-  .dashboard-tasks-payment p {
-    margin-left: 20px;
-    color: #555;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .dashboard-circle-chart {
-      width: 100px;
-      height: 100px;
-      font-size: 1rem;
-    }
-  }
-  
+}
