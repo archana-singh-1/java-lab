@@ -31,9 +31,10 @@ body{
 }
 .sidebar-heading h1{
     font-size: 1.5rem;
+    color: black;
 }
 .sidebar-heading p{
-    color: rgb(73, 71, 71);
+    color: rgb(16, 16, 16);
 }
 
 .sidebar-menus{
@@ -49,7 +50,7 @@ body{
     justify-content: flex-start;
     gap:1rem;
     text-decoration:none ;
-    color: rgb(85, 82, 82);
+    color: rgb(21, 20, 20);
 }
 
 

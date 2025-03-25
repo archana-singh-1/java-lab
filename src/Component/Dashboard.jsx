@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faChevronDown
   } from '@fortawesome/free-solid-svg-icons';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 
 const Dashboard = () => {
+  const [date, setDate] = useState(new Date());
   return (
     <div className="dashboard-container">
     <div className="dashboard-content">
       <div className="dashboard-header">
-        <h1>Hi Martin!</h1>
+        <h1>Hi Mahima!</h1>
         <p>You have complete 5 lesson in last day.</p> 
         <p>Start your learning today.</p>
       </div>
@@ -83,7 +87,13 @@ const Dashboard = () => {
         <div className='dashboard-sidebar'>
         <div className="dashboard-calendar-section">
           <h3>June 28 Monday</h3>
-          <img src="https://cdn.dribbble.com/users/207059/screenshots/11107013/media/8eb379a6eddaea96a5da2215af5c364a.png" alt="Calendar" />
+          <div className="calendar">
+        <Calendar
+          onChange={setDate}
+          value={date}
+        />
+      </div>
+        <p className="date-para">Selected Date: {date.toDateString()}</p>
         </div>
         <div className="dashboard-tasks-payment">
         <div className='das-course-1'>
