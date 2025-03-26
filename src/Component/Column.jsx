@@ -3,6 +3,7 @@ import './Column.css';
 
 function Column({ logo, authorImg, progress, course, authorName,duration }) {
   return (
+    <div className='whole-column-container'>
     <div className='courses-box'>
       <div className='box-logo'>
         <img src={logo} alt="Technology Logo" className='logo' />
@@ -21,6 +22,7 @@ function Column({ logo, authorImg, progress, course, authorName,duration }) {
         </div>
         <p className="progress-status">{progress}</p>
       </div>
+    </div>
     </div>
   );
 }
