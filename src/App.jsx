@@ -15,6 +15,7 @@ const rowData = [
   [{ logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png", authorImg: "https://www.w3schools.com/w3images/avatar1.png" , progress: "70% Complete", course: "Software Development", authorName:"William joe" }]
 ];
 
+
 function App() {
   return (
     <Router>
