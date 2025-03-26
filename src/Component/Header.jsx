@@ -15,7 +15,7 @@ function Header() {
              <div className="header-logo">
               <a href="#"><FontAwesomeIcon icon={faBell} /></a>
               <img src="./girl.jpg" alt="girl-img"/>
-              <h2>Martin nel</h2>
+              <h2>Mahima Awashti</h2>
               <a href="#"><FontAwesomeIcon icon={faChevronDown} /></a>
              </div>
         </div>

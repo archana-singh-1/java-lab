@@ -1,0 +1,72 @@
+.whole-details-page{
+    /* background-color: green; */
+    height: auto;
+    width: 50%;
+    margin-left: 20%;
+    padding: 10px;
+}
+
+.details-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.course-video{
+    position: relative;
+    border: 1px solid black;
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.course-video iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-video h1{
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+    font-size: 20px; 
+}
+
+.details-video .detains-second-line{
+    display: flex;
+    gap :20px;
+}
+
+.details-video p{
+    margin-top: 5px;
+    color: rgb(101, 101, 101);
+    font-weight: 500;
+    font-size: 14px; 
+}
+
+.details-overview{
+    margin-top: 40px;
+    border: 2px solid red;
+    width: 60%;
+}
+
+.overview-description{
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.overview-description a{
+    text-decoration: green;
+    font-size: 15px;
+    color: black;
+}
