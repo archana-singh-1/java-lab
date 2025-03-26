@@ -5,6 +5,7 @@ function DetailsCourse () {
 
   return (
     <>
+    <div className='whole-details-page'>
     <div className='details-container'>
         {/* <div className='details-course'> */}
         <div className="course-video">
@@ -22,15 +23,21 @@ function DetailsCourse () {
             </div>
             
         </div>
-
-        <div className=''>
-            <a href='#'>Overview</a>
-            <a href='#'>Overview</a>
-            <a href='#'>Overview</a>
-        </div>
     </div>
+
+    <div className='details-overview'>
+        <div className='overview-description'>
+            <a href='#'>Overview</a>
+            <a href='#'>FAQ</a>
+            <a href='#'>Discussion</a>
+            <a href='#'>Reviews</a>
+        </div>
+    <div className='details-line'></div>
+
+    </div>
+    
+</div>
     </>
   )
 }
-
 export default DetailsCourse
