@@ -104,10 +104,6 @@ const Dashboard = () => {
         <h4>Discussion Algorithm</h4>
         <p>08:00 AM - 15:00 PM</p>
         </div>
-        <div className='dashboard-course-card'>
-        <h4>Home Page</h4>
-        <p>08:00 AM - 15:00 PM</p>
-        </div>
         </div>
         <div className="dashboard-tasks-payment">
             <div className='das-course-1'>
