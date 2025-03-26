@@ -7,6 +7,7 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user"); 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -21,10 +22,11 @@ function Signup() {
         username,
         email,
         password,
+        role, 
       });
 
-      alert("Signup successful!"); 
-      navigate("/login");  
+      alert("Signup successful!");
+      navigate("/login");
     } catch (error) {
       setError(error.response?.data?.message || "Signup failed! Please try again.");
     } finally {
@@ -40,12 +42,18 @@ function Signup() {
           <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+
+          <select value={role} onChange={(e) => setRole(e.target.value)} required>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+          </select>
+
           <button className="signup-btn" type="submit" disabled={loading}>
             {loading ? "Signing up..." : "Signup"}
           </button>
         </form>
-        
-        {error && <p className="error-message">{error}</p>}  
+
+        {error && <p className="error-message">{error}</p>}
 
         <p className="switch-link">
           Already have an account? <Link to="/login">Login here</Link>

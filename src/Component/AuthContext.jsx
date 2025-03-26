@@ -1,7 +1,6 @@
-import { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
-
 
 export const AuthContext = createContext();
 
@@ -9,10 +8,16 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      const decoded = jwtDecode(token);
-      setUser({ username: decoded.username });
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        const decoded = jwtDecode(token);
+        setUser({ username: decoded.username });
+      }
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      localStorage.removeItem("token"); // अगर गलत टोकन हो तो इसे हटा दें
+      setUser(null);
     }
   }, []);
 
@@ -22,10 +27,11 @@ export const AuthProvider = ({ children }) => {
         email,
         password,
       });
-      alert("Login succesfully")
 
+      alert("Login Successfully");
       localStorage.setItem("token", res.data.token);
-      setUser({ username: res.data.username });
+      const decoded = jwtDecode(res.data.token);
+      setUser({ username: decoded.username });
     } catch (error) {
       alert("Login failed!");
     }
