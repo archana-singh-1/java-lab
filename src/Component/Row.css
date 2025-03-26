@@ -5,21 +5,18 @@
     color: #E1EACD;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 .row-container{
     height: 190px;
-    width: 100%;
+    width: 75%;
     font-family: sans-serif Arial,sans-serif;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items:left;
-    background: linear-gradient(to right, 
-        #D1F8EF, 
-        rgba(209, 248, 239, 0.8) 25%,  
-        rgba(248, 199, 234, 0.6) 50%, 
-        rgba(227, 228, 223, 0.8) 75%,  
-        #bae4be  
-    );
-
-    
+    margin-left: 25%;
 }

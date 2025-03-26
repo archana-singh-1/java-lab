@@ -1,0 +1,45 @@
+.details-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 100%;
+    width: 50%;
+    margin-left: 20%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.course-video{
+    position: relative;
+    border: 1px solid black;
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.course-video iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-video h1{
+    text-align: center;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+    font-size: 20px; 
+}
+
+.details-video .detains-second-line{
+    display: flex;
+    gap :10px;
+}
+
+.details-video p{
+    color: rgb(101, 101, 101);
+    font-weight: 500;
+    font-size: 14px; 
+}

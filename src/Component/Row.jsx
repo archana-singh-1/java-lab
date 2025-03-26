@@ -13,8 +13,6 @@ function Row  ({columns})  {
       ))}
       <Column />
       <Column />
-      <Column/>
-      {/* <Column/> */}
            
     </div>
     </>

@@ -13,11 +13,13 @@ body{
 }
 
 .header-component {
-    width: 100vw;
+    width: 94vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    margin: 20px;
+    background: linear-gradient(to right, rgb(207, 247, 225), white,white, rgb(227, 245, 227));
     background: linear-gradient(to right, rgb(207, 247, 225), rgb(248, 244, 244),rgb(244, 240, 240), rgb(227, 245, 227));
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }

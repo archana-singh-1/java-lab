@@ -105,7 +105,7 @@ const Dashboard = () => {
         <p>08:00 AM - 15:00 PM</p>
         </div>
         <div className='dashboard-course-card'>
-        <h4>Simple Home Page Design </h4>
+        <h4>Home Page</h4>
         <p>08:00 AM - 15:00 PM</p>
         </div>
         </div>
