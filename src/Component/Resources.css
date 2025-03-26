@@ -1,0 +1,47 @@
+.resources-container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .resources-container h1 {
+    text-align: center;
+    color: #2f4f4f;
+    margin-bottom: 30px;
+  }
+  
+  .resource-section {
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+  
+  .resource-section h2 {
+    color: #0066cc;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .resource-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  .resource-section ul li {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .resource-section ul li a {
+    color: #0077b6;
+    text-decoration: none;
+  }
+  
+  .resource-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
