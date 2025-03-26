@@ -18,7 +18,7 @@ const Sidebar = () => {
     <div className="sidebar">
         <div className='sidebar-heading'>
             <img src='letter-j (2).png' alt='logo name' style={{width: '50px'}}/>
-            <h1 className="logo">Estudy</h1>
+            <h1 className="logo">JAVA LAB</h1>
             <p>Learn From Home</p>
         </div>
 

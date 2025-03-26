@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: auto;
     display: flex;
-    background: linear-gradient(to right, rgb(217, 245, 230), white,white, rgb(228, 247, 228));
+    background: linear-gradient(to right, rgb(217, 245, 230), rgb(245, 241, 243),rgb(247, 244, 245), rgb(228, 247, 228));
 }
 
 .header-component {
@@ -20,6 +20,8 @@ body{
     padding: 20px 40px;
     margin: 20px;
     background: linear-gradient(to right, rgb(207, 247, 225), white,white, rgb(227, 245, 227));
+    background: linear-gradient(to right, rgb(207, 247, 225), rgb(248, 244, 244),rgb(244, 240, 240), rgb(227, 245, 227));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   .header-component h1 {
@@ -28,12 +30,12 @@ body{
     align-items: center;
     gap: 10px;
     margin-left: 13rem;
-    color: #333;
+    color: #0d0d0d;
   }
-  h1 .search-icon{
+  .header-component  h1 .search-icon{
     background-color: white;
     border-radius: 60%;
-    color: rgb(97, 94, 94);
+    color: rgb(7, 7, 7);
     padding: 5px;
   }
   
@@ -46,7 +48,7 @@ body{
   
   .header-logo svg {
     font-size: 20px;
-    color: #555;
+    color: #151515;
     cursor: pointer;
     transition: transform 0.2s;
   }
@@ -65,7 +67,7 @@ body{
   .header-logo h2 {
     margin: 0;
     font-size: 15px;
-    color: #4d4b4b;
+    color: #141313;
   }
   
   @media (max-width: 600px) {

@@ -1,9 +1,9 @@
-
 import React from "react";
-import Row from "./Component/Row";
 import Header from "./Component/Header";
 import Sidebar from "./Component/Sidebar";
 import DetailsCourse from "./Details/DetailsCourse";
+import Dashboard from "./Component/Dashboard";
+import Row from "./Component/Row";
 
 const rowData = [
   
@@ -18,22 +18,26 @@ const rowData = [
 ]
 
 
-function App(){
-
-  return(
-    <>
-     <Header/>
-     <Sidebar/>
-     <DetailsCourse/>
-
-    {/* <div className="app-container" style={{marginBottom:'50px'}}>
-      {rowData.map((row, index)=>(
+function App() {
+  return (
+    <div className="app-container">
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <div className="page-content">
+          <Dashboard />
+          <div className="app-container">
+          {rowData.map((row, index)=>(
         <Row key={index} columns={row}/>
       ))}
     
-    </div> */}
+    </div>
 
-    </>
-  )
+    <DetailsCourse/>
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default App;
