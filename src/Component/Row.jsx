@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Column from './Column';
+import './Row.css';
 
 function Row() {
   const [courses, setCourses] = useState([]); 
