@@ -4,6 +4,7 @@ import Sidebar from "./Component/Sidebar";
 import DetailsCourse from "./Details/DetailsCourse";
 import Dashboard from "./Component/Dashboard";
 import Row from "./Component/Row";
+import "./App.css";
 
 const rowData = [
   

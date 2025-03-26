@@ -32,5 +32,4 @@ function DetailsCourse () {
     </>
   )
 }
-
 export default DetailsCourse
