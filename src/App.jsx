@@ -7,6 +7,7 @@ import Row from "./Component/Row";
 import DetailsCourse from "./Details/DetailsCourse";
 import "./App.css";
 import Resources from "./Component/Resources";
+import Chat from "./Component/Chat";
 
 const rowData = [
   [{ logo: "https://preview.redd.it/some-people-may-think-that-the-book-in-granny-is-the-book-v0-7ndcpqgu02jb1.png?width=640&crop=smart&auto=webp&s=1572fb87ecce9fd169e50d51469d8d9e667f7ffc", authorImg: "https://www.w3schools.com/w3images/avatar2.png",  progress: "Completed", course:"Design & Histor", authorName:"William joe" } ],
@@ -35,6 +36,7 @@ function App() {
               {/* course details */}
               <Route path="/course-details" element={<DetailsCourse />} />
               <Route path="/sources" element={<Resources/>} />
+              <Route path="/chat" element={<Chat/>} />
             </Routes>
           </div>
         </div>
