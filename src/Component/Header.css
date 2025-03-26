@@ -1,25 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline:none;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    width: 100%;
-    height: auto;
-    display: flex;
-    background: linear-gradient(to right, rgb(217, 245, 230), rgb(245, 241, 243),rgb(247, 244, 245), rgb(228, 247, 228));
-}
-
 .header-component {
-    width: 94vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    margin: 20px;
-    background: linear-gradient(to right, rgb(207, 247, 225), white,white, rgb(227, 245, 227));
+    padding: 15px 40px;
     background: linear-gradient(to right, rgb(207, 247, 225), rgb(248, 244, 244),rgb(244, 240, 240), rgb(227, 245, 227));
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
