@@ -146,6 +146,7 @@
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .dashboard-sidebar {

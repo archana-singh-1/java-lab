@@ -34,6 +34,7 @@ function App() {
               
               {/* course details */}
               <Route path="/course-details" element={<DetailsCourse />} />
+              <Route path="/sources" element={<Resources/>} />
             </Routes>
           </div>
         </div>
