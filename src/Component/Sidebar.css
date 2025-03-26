@@ -14,7 +14,7 @@ body{
 }
 
 .sidebar{
-    height: 95vh;
+    height: 100vh;
     width: 200px;
     display: flex;
     flex-direction: column;
