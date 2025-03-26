@@ -4,6 +4,7 @@ import Sidebar from "./Component/Sidebar";
 import DetailsCourse from "./Details/DetailsCourse";
 import Dashboard from "./Component/Dashboard";
 import Row from "./Component/Row";
+import Chat from "./Component/Chat";
 import "./App.css";
 
 const rowData = [
@@ -17,8 +18,6 @@ const rowData = [
   [{ logo: "https://cdn-icons-png.flaticon.com/512/919/919851.png", authorImg: "https://www.w3schools.com/w3images/avatar1.png" , progress: "70% Complete", course: "Software Development", authorName:"William joe" }]
 
 ]
-
-
 function App() {
   return (
     <div className="app-container">
@@ -33,12 +32,15 @@ function App() {
       ))}
     
     </div>
-
     <DetailsCourse/>
+    <Chat/>
         </div>
       </div>
     </div>
   );
 }
-
 export default App;
+
+
+
+
