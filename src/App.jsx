@@ -5,6 +5,7 @@ import DetailsCourse from "./Details/DetailsCourse";
 import Dashboard from "./Component/Dashboard";
 import Row from "./Component/Row";
 import "./App.css";
+import Resources from "./Component/Resources";
 
 const rowData = [
   
@@ -33,7 +34,7 @@ function App() {
       ))}
     
     </div>
-
+    <Resources/>
     <DetailsCourse/>
         </div>
       </div>

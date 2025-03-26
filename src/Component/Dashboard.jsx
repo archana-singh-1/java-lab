@@ -60,11 +60,11 @@ const Dashboard = () => {
          </div>
           <div className="dashboard-course-card">
             <div>
-            <h4>History of graphic design</h4>
+            <h4>History of Java</h4>
             <span>By William Joe</span>
             </div>
             <p>25% complete | ⭐ 4.3</p>
-            <button>View Course</button>
+            <a href="https://www.geeksforgeeks.org/the-complete-history-of-java-programming-language/" target="_blank" rel="noreferrer">View Course</a>
           </div>
           <div className="dashboard-course-card">
             <div>

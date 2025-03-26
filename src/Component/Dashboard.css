@@ -140,7 +140,7 @@
   font-size: 0.9rem;
 }
 
-.dashboard-course-card button {
+.dashboard-course-card a{
   border: 3px solid rgb(99, 242, 197);
   color: #00b894;
   background-color: white;
@@ -273,7 +273,7 @@
     height: 70px;
   }
 
-  .dashboard-course-card button {
+  .dashboard-course-card a{
     width: 100%;
     text-align: center;
   }
