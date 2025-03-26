@@ -1,15 +1,61 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-    faChevronDown
-  } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
+const pieData = [
+  { name: 'Reading', value: 30, color: '#8884d8' },
+  { name: 'Writing', value: 20, color: '#82ca9d' },
+  { name: 'Video', value: 25, color: '#ffc658' },
+  { name: 'Assignment', value: 25, color: '#ff8042' },
+];
+
+const lineDataSets = {
+  Reading: [
+    { day: 'Mon', value: 2 },
+    { day: 'Tue', value: 3 },
+    { day: 'Wed', value: 4 },
+    { day: 'Thu', value: 3 },
+    { day: 'Fri', value: 5 },
+    { day: 'Sat', value: 2 },
+    { day: 'Sun', value: 4 },
+  ],
+  Writing: [
+    { day: 'Mon', value: 1 },
+    { day: 'Tue', value: 2 },
+    { day: 'Wed', value: 1 },
+    { day: 'Thu', value: 3 },
+    { day: 'Fri', value: 2 },
+    { day: 'Sat', value: 1 },
+    { day: 'Sun', value: 2 },
+  ],
+  Video: [
+    { day: 'Mon', value: 3 },
+    { day: 'Tue', value: 2 },
+    { day: 'Wed', value: 4 },
+    { day: 'Thu', value: 4 },
+    { day: 'Fri', value: 5 },
+    { day: 'Sat', value: 3 },
+    { day: 'Sun', value: 4 },
+  ],
+  Assignment: [
+    { day: 'Mon', value: 1 },
+    { day: 'Tue', value: 1 },
+    { day: 'Wed', value: 2 },
+    { day: 'Thu', value: 2 },
+    { day: 'Fri', value: 3 },
+    { day: 'Sat', value: 2 },
+    { day: 'Sun', value: 2 },
+  ],
+};
 
 const Dashboard = () => {
   const [date, setDate] = useState(new Date());
+  const [activeActivity, setActiveActivity] = useState('Reading');
+
   return (
     <div className="dashboard-container">
     <div className="dashboard-content">
@@ -24,31 +70,52 @@ const Dashboard = () => {
             <h3>Learning Time</h3>
             <h4>Today <a href="#"><FontAwesomeIcon icon={faChevronDown} /></a></h4>
         </div>
-          <div className="dashboard-circle-chart">
-            <span>2h 35m</span>
-          </div>
-          <div className="dashboard-legend">
-            <div>
-            <p><span className="dot reading"></span>Reading</p>
-            <p><span className="dot writing"></span>Writing</p>
+         <div className="dashboard-circle-chart">
+              <PieChart width={200} height={200}>
+                <Pie
+                  data={pieData}
+                  dataKey="value"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  onClick={(entry) => setActiveActivity(entry.name)}
+                >
+                  {pieData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+              </PieChart>
+              <span>2h 35m</span>
             </div>
-            <div>
-            <p><span className="dot video"></span>Video</p>
-            <p><span className="dot assignment"></span>Assignment</p>
-            </div>
-          </div>
-        </div>
 
-        <div className="dashboard-activity-chart">
+            <div className="dashboard-legend">
+              {pieData.map((item, index) => (
+                <p key={index} onClick={() => setActiveActivity(item.name)} style={{ cursor: 'pointer' }}>
+                  <span className="dot" style={{ backgroundColor: item.color }}></span>{item.name}
+                </p>
+              ))}
+            </div>
+          </div>
+         <div className="dashboard-activity-chart">
             <div className='time-cart'>
-                <h3>My Activity</h3>
-                <h4>Weekly<a href="#"><FontAwesomeIcon icon={faChevronDown} /></a></h4>
+              <h3>My Activity</h3>
+              <h4>{activeActivity}</h4>
             </div>
-          <img src="./linechart.png" alt="Activity Chart" />
-        </div>
+            <LineChart
+              width={200}
+              height={185}
+              data={lineDataSets[activeActivity]}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="day" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="value" stroke="#8884d8" />
+            </LineChart>
+          </div>
       </div>
-        
-
         <div className="dashboard-courses-section">
           <div className='das-course-1'>
             <h3>My Courses</h3>
