@@ -1,7 +1,12 @@
+ .whole-column-container{
+    width: 100%;
+    margin-left: 90%;
+ }
+ 
  .courses-box {
     background-color:white;
     height: 180px; 
-    width: 280px;
+    width: 280px; 
     margin: 15px ;
     padding: 10px;
     display: flex;
