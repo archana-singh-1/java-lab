@@ -44,7 +44,7 @@ const Dashboard = () => {
                 <h3>My Activity</h3>
                 <h4>Weekly<a href="#"><FontAwesomeIcon icon={faChevronDown} /></a></h4>
             </div>
-          <img src="https://cdn.dribbble.com/users/207059/screenshots/11107013/media/640e3b4739b5e19f308b46a73d019419.png" alt="Activity Chart" />
+          <img src="./linechart.png" alt="Activity Chart" />
         </div>
       </div>
         
@@ -60,27 +60,27 @@ const Dashboard = () => {
          </div>
           <div className="dashboard-course-card">
             <div>
-            <h4>History of graphic design</h4>
-            <span>By William Joe</span>
+            <h4>History of Java</h4>
+            <span>By Priyanka</span>
             </div>
             <p>25% complete | ⭐ 4.3</p>
-            <button>View Course</button>
+            <a href="https://www.geeksforgeeks.org/the-complete-history-of-java-programming-language/" target="_blank" rel="noreferrer">View Course</a>
           </div>
           <div className="dashboard-course-card">
             <div>
-            <h4>App Design Course</h4>
-            <span>By William Joe</span>
+            <h4>Important Java Programs</h4>
+            <span>By Archna</span>
             </div>
             <p>25% complete | ⭐ 4.3</p>
-            <button>View Course</button>
+            <a href="https://www.geeksforgeeks.org/java-programming-examples/" target="_blank" rel="noreferrer">View Course</a>
           </div>
           <div className="dashboard-course-card">
             <div>
-            <h4>Digital painting</h4>
-            <span>By William Joe</span>
+            <h4>Java Learning path</h4>
+            <span>By Priya</span>
             </div>
             <p>25% complete | ⭐ 4.3</p>
-            <button>View Course</button>
+            <a href="https://roadmap.sh/java" target="_blank" rel="noreferrer">View Course</a>
           </div>
         </div>
         </div>
