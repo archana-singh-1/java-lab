@@ -1,37 +1,35 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
-    try {
-      const token = localStorage.getItem("token");
-      if (token) {
+    const token = localStorage.getItem("token");
+    if (token) {
+      try {
         const decoded = jwtDecode(token);
         setUser({ username: decoded.username });
+      } catch (error) {
+        console.error("Invalid Token:", error);
+        localStorage.removeItem("token");
+        setUser(null);
       }
-    } catch (error) {
-      console.error("Error decoding token:", error);
-      localStorage.removeItem("token"); // अगर गलत टोकन हो तो इसे हटा दें
-      setUser(null);
     }
   }, []);
 
   const login = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/auth/login", {
-        email,
-        password,
-      });
-
-      alert("Login Successfully");
+      const res = await axios.post("http://localhost:4000/api/auth/login", { email, password });
       localStorage.setItem("token", res.data.token);
-      const decoded = jwtDecode(res.data.token);
-      setUser({ username: decoded.username });
+      setUser(jwtDecode(res.data.token));
+      alert("Login Successful!");
+      navigate("/dashboard"); 
     } catch (error) {
       alert("Login failed!");
     }
@@ -40,6 +38,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("token");
     setUser(null);
+    navigate("/login");
   };
 
   return (
@@ -48,3 +47,7 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+export const useAuth = () => useContext(AuthContext);
+
+
