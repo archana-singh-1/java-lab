@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import './Row.css'
 import Column from './Column'
 
 function Row  ({columns})  {
