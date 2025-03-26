@@ -111,7 +111,6 @@ const Dashboard = () => {
               <XAxis dataKey="day" />
               <YAxis />
               <Tooltip />
-              <Legend />
               <Line type="monotone" dataKey="value" stroke="#8884d8" />
             </LineChart>
           </div>
