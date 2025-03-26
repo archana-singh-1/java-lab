@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import Header from "./Component/Header";
 import Sidebar from "./Component/Sidebar";
 import Dashboard from "./Component/Dashboard";
@@ -22,7 +22,7 @@ import Dashboard from "./Component/Dashboard";
 
 // ]
 function App(){
-  const [showCourses, setShowCourses] = useState(false);
+  // const [showCourses, setShowCourses] = useState(false);
   return(
     <>
      <Header/>

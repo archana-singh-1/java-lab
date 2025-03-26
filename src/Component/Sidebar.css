@@ -5,14 +5,11 @@
     outline:none;
     font-family: 'Open Sans', sans-serif;
 }
-
 body{
     width: 100%;
     height: auto;
     display: flex;
-
 }
-
 .sidebar{
     height: 95vh;
     width: 200px;
