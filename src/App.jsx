@@ -7,6 +7,7 @@ import Row from "./Component/Row";
 import Chat from "./Component/Chat";
 import "./App.css";
 
+
 const rowData = [
   
   [{ logo: "https://preview.redd.it/some-people-may-think-that-the-book-in-granny-is-the-book-v0-7ndcpqgu02jb1.png?width=640&crop=smart&auto=webp&s=1572fb87ecce9fd169e50d51469d8d9e667f7ffc", authorImg: "https://www.w3schools.com/w3images/avatar2.png",  progress: "Completed", course:"Design & Histor", authorName:"William joe" } ],
