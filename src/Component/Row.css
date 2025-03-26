@@ -1,16 +1,3 @@
-
-:root{
-    color: #D1F8EF;
-    color:#FFEDFA;
-    color: #E1EACD;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
-
 .row-container{
     height: 190px;
     width: 75%;
