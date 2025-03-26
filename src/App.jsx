@@ -1,11 +1,11 @@
-
-
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Component/AuthContext";
 import Signup from "./Component/signup";
 import Login from "./Component/Login";
 
 function App() {
+
   return (
     <AuthProvider>
       <Router>

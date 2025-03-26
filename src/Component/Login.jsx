@@ -6,24 +6,24 @@ import "./login.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); 
-  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); 
-    setLoading(true); 
+    setError("");
+    setLoading(true);
 
     try {
       await login(email, password);
       console.log("Navigating to Home Page");
-      navigate("/");  
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed! Please try again.");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
@@ -38,8 +38,8 @@ function Login() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
-        
-        {error && <p className="error-message">{error}</p>} 
+
+        {error && <p className="error-message">{error}</p>}
 
         <p className="switch-link">
           Don't have an account? <Link to="/signup">Sign up</Link>
