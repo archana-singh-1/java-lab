@@ -26,7 +26,7 @@ const Sidebar = () => {
         <Link to="/"><FontAwesomeIcon icon={faHouse} /> Dashboard</Link>
         <Link to="/courses"><FontAwesomeIcon icon={faBookOpen} /> Course</Link>
         <Link to="/sources"><FontAwesomeIcon icon={faFolderOpen} /> Resources</Link>
-        <Link to="chat"><FontAwesomeIcon icon={faComments} /> Chat</Link>
+        <Link to="/chat"><FontAwesomeIcon icon={faComments} /> Chat</Link>
         <Link to="#"><FontAwesomeIcon icon={faCalendarAlt} /> Schedule</Link>
         <Link to="#"><FontAwesomeIcon icon={faUser} /> Profile</Link>
         <Link to="#"><FontAwesomeIcon icon={faGear} /> Setting</Link>
