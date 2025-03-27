@@ -55,12 +55,8 @@
 
 .dashboard-circle-chart {
   width: 120px;
-  height: 120px;
+  height: 60px;
   border-radius: 50%;
-  border-top: 10px solid #4b8bff;
-  border-right: 10px solid red;
-  border-bottom: 10px solid green;
-  border-left: 10px solid orange;
   margin: 20px auto;
   display: flex;
   justify-content: center;
@@ -82,19 +78,6 @@
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
-}
-
-.reading {
-  background-color: #4b8bff;
-}
-.writing {
-  background-color: #ff6b81;
-}
-.video {
-  background-color: #00b894;
-}
-.assignment {
-  background-color: #f9ca24;
 }
 
 .dashboard-activity-chart img {
@@ -195,7 +178,7 @@
   cursor: pointer;
 }
 
-/* ✅ RESPONSIVE PART */
+
 
 @media screen and (max-width: 992px) {
   .dashboard-container {

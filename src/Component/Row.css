@@ -1,9 +1,9 @@
- .row-container{
-    height: 190px;
-    width: 75%;
-    font-family: sans-serif Arial,sans-serif;
+.row-container{
     display: flex;
     flex-wrap: wrap;
-    align-items:left;
-    margin-left: 25%;
+    margin-top: 20px;
+    width: 80%;
+    /* margin-left: 20%; */
+    justify-content: space-between;
+
 }

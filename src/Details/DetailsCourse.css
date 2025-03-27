@@ -1,5 +1,6 @@
 .whole-details-page{
-    /* background-color: green; */
+    display: flex;
+    justify-content: right;
     height: auto;
     width: 50%;
     margin-left: 20%;
@@ -10,10 +11,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid red;
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     background-color: white;
     border-radius: 10px;
 }
@@ -21,10 +21,10 @@
 
 .course-video{
     position: relative;
-    border: 1px solid black;
     height: 190px;
     width: 100%;
     overflow: hidden;
+
 }
 
 .course-video iframe{
@@ -32,6 +32,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 
 .details-video h1{
     margin-top: 15px;
@@ -54,19 +55,73 @@
 }
 
 .details-overview{
-    margin-top: 40px;
-    border: 2px solid red;
+    margin-top: 30px;
     width: 60%;
 }
 
+
 .overview-description{
     display:flex;
-    justify-content: space-between;
+    gap: 20px;
 
 }
 
 .overview-description a{
-    text-decoration: green;
-    font-size: 15px;
-    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(101, 101, 101);
+}
+
+.details-line{
+    margin-top: 10px;
+    border: 1px solid rgb(207, 204, 204);
+    width: 160%;
+}
+
+
+/*  */
+.about-course-overview{
+    margin-top:15px;
+    width: 150%;
+   ;
+}
+
+.about-course-overview p{
+    margin-top: 5px;
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+}
+
+.about-course-overview ul{
+    margin-top: 5px;
+    margin-left: 15px;
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+}
+
+
+/* second part */
+
+.detains-second{
+    position: absolute;
+    background-color: white;
+    height:550px;
+    width: 300px;
+    margin-right: 2%;
+    right:-0;
+    margin-top: 2px;
+
+}
+
+.details-second-section{
+    margin-top: 50px;
+    margin-left: 25px;
+    
+}
+
+.details-second-section img{
+    object-fit: cover;
+    height: 390px;
+    width: 200px;
 }
