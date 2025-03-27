@@ -12,14 +12,15 @@ import {
   faGear, 
   faRightFromBracket 
 } from "@fortawesome/free-solid-svg-icons";
+import { useAuth } from "./AuthContext";
 
 const Sidebar = () => {
+  const { logout } = useAuth(); 
   return (
     <div className="sidebar">
       <div className="sidebar-heading">
         <img src="letter-j (2).png" alt="logo name" style={{ width: "50px" }} />
-        <h1 className="logo">JAVA LAB</h1>
-        <p>Learn From Home</p>
+
       </div>
 
       <div className="sidebar-menus">
@@ -33,10 +34,13 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar-logout">
-        <Link to="#"><FontAwesomeIcon icon={faRightFromBracket} /> Logout</Link>
+        <Link  onClick={logout} ><FontAwesomeIcon icon={faRightFromBracket}/> Logout</Link>
       </div>
     </div>
   );
 };
 
 export default Sidebar;
+
+
+
