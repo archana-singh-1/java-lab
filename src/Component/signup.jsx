@@ -26,7 +26,7 @@ function Signup() {
       });
 
       alert("Signup successful!");
-      navigate("/login");
+      navigate("/dashboard");
     } catch (error) {
       setError(error.response?.data?.message || "Signup failed! Please try again.");
     } finally {
@@ -64,3 +64,5 @@ function Signup() {
 }
 
 export default Signup;
+
+

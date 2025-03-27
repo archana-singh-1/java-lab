@@ -23,3 +23,34 @@ body{
   .page-content {
     flex-grow: 1;
   }  
+
+
+/* Blur background when login/signup is active */
+.blur-background {
+  filter: blur(8px); /* Background blur effect */
+  pointer-events: none; /* Prevent clicks */
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}

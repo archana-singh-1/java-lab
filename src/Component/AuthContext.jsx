@@ -1,45 +1,31 @@
-import React, { createContext, useState, useEffect } from "react";
-import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    try {
-      const token = localStorage.getItem("token");
-      if (token) {
-        const decoded = jwtDecode(token);
-        setUser({ username: decoded.username });
-      }
-    } catch (error) {
-      console.error("Error decoding token:", error);
-      localStorage.removeItem("token"); // अगर गलत टोकन हो तो इसे हटा दें
-      setUser(null);
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      setUser(JSON.parse(loggedInUser));
     }
   }, []);
 
-  const login = async (email, password) => {
-    try {
-      const res = await axios.post("http://localhost:4000/api/auth/login", {
-        email,
-        password,
-      });
-
-      alert("Login Successfully");
-      localStorage.setItem("token", res.data.token);
-      const decoded = jwtDecode(res.data.token);
-      setUser({ username: decoded.username });
-    } catch (error) {
-      alert("Login failed!");
-    }
+  const login = (email, password) => {
+ 
+    const userData = { email };
+    localStorage.setItem("user", JSON.stringify(userData));
+    setUser(userData);
+    navigate("/dashboard");
   };
 
   const logout = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     setUser(null);
+    navigate("/login");
   };
 
   return (
