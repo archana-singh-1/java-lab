@@ -8,9 +8,10 @@ function Row() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://java-backend-1-b2ed.onrender.com/api/courses/getCourse')
+    fetch('https://java-backen.onrender.com/api/courses/getCourse')
       .then((response) => response.json())
       .then((data) => {
+        console.log("API Response:", data);
         if (data && data.length > 0) {
           const seen = new Set();
           const uniqueCourses = data.filter((course) => {
@@ -32,7 +33,6 @@ function Row() {
         courses.map((course, index) => (
           <div key={index} onClick={() => navigate("/course-details")} style={{ cursor: "pointer" }}>
             <Column
-              logo={course.logo || "default-logo.png"} 
               authorImg={course.authorImg || "default-author.png"}
               progress={course.progress || "0% Completed"}
               course={course.title} 
